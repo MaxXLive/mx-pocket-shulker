@@ -12,6 +12,7 @@
 		"issues": "https://github.com/MaxXLive/mx-pocket-shulker/issues"
 	},
 	"license": "MIT",
+	"icon": "assets/mxpocketshulker/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
