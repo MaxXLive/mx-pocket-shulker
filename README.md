@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/icon.png" alt="MX Pocket Shulker icon" width="128"></p>
+
 <h1 align="center">MX Pocket Shulker</h1>
 
 <p align="center">
