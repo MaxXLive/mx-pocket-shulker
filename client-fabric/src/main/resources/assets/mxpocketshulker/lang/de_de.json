@@ -1,0 +1,6 @@
+{
+	"key.category.mxpocketshulker.main": "MX Pocket Shulker",
+	"key.mxpocketshulker.open": "Shulker-Kiste öffnen",
+	"message.mxpocketshulker.none": "Keine Shulker-Kiste im Inventar",
+	"message.mxpocketshulker.unsupported": "Dieser Server unterstützt das Öffnen von Shulker-Kisten aus dem Inventar nicht"
+}

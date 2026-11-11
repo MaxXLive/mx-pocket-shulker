@@ -1,0 +1,6 @@
+{
+	"key.category.mxpocketshulker.main": "MX Pocket Shulker",
+	"key.mxpocketshulker.open": "Open Shulker Box",
+	"message.mxpocketshulker.none": "No shulker box in your inventory",
+	"message.mxpocketshulker.unsupported": "This server doesn't support opening shulker boxes from the inventory"
+}

@@ -1,0 +1,6 @@
+name: PocketShulkerPaperBridge
+version: '${version}'
+main: de.ermackov.pocketshulkerbridge.PocketShulkerPaperBridge
+api-version: '${minecraftVersion}'
+description: Open shulker boxes without placing them (server side of the MX Pocket Shulker mod)
+authors: [MaxXLive]

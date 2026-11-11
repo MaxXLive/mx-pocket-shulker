@@ -1,0 +1,11 @@
+mxguide:
+  enabled: true
+  id: pocketshulker
+  name: MXPocketShulker
+  description: "Open shulker boxes without placing them"
+  priority: 30
+  silent: false
+  message:
+    - "Sneak and right-click a shulker box in your hand to open it without placing it."
+    - "With the MX Pocket Shulker client mod, press B to open the last opened shulker box from anywhere in your inventory."
+    - "The key can be changed under Options → Controls."

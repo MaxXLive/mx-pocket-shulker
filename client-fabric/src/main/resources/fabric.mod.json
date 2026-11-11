@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "mxpocketshulker",
+	"version": "${version}",
+	"name": "MX Pocket Shulker",
+	"description": "Open shulker boxes without placing them: shift + right-click one in your hand, or press B to open the last one you opened from anywhere in your inventory. Must be installed on the server too (singleplayer works out of the box).",
+	"authors": [
+		"maxxlive"
+	],
+	"contact": {
+		"sources": "https://github.com/MaxXLive/mx-pocket-shulker",
+		"issues": "https://github.com/MaxXLive/mx-pocket-shulker/issues"
+	},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"de.ermackov.pocketshulker.PocketShulkerMod"
+		],
+		"client": [
+			"de.ermackov.pocketshulker.client.PocketShulkerClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.0",
+		"fabric-api": "*",
+		"minecraft": ">=26.3"
+	}
+}

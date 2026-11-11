@@ -1,0 +1,11 @@
+mxguide:
+  enabled: true
+  id: pocketshulker
+  name: MXPocketShulker
+  description: Shulker-Kisten öffnen, ohne sie zu platzieren
+  priority: 30
+  silent: false
+  message:
+    - "Schleichen und mit einer Shulker-Kiste in der Hand rechtsklicken öffnet sie, ohne sie zu platzieren."
+    - "Mit dem Client-Mod MX Pocket Shulker öffnet B die zuletzt geöffnete Shulker-Kiste von überall aus dem Inventar."
+    - "Die Taste lässt sich unter Optionen → Steuerung ändern."
