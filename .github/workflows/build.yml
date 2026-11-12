@@ -59,7 +59,7 @@ jobs:
         with:
           name: PocketShulker
           path: |
-            client-fabric/build/libs/MXPocketShulker-*.jar
+            client-fabric/build/libs/MXPocketShulker-fabric-*.jar
             server-paper/build/libs/PocketShulkerPaperBridge-*.jar
           if-no-files-found: error
 
@@ -72,8 +72,22 @@ jobs:
         run: |
           cat "$RUNNER_TEMP/CHANGELOG.md"
           gh release create "$TAG" \
-            client-fabric/build/libs/MXPocketShulker-"$VERSION".jar \
+            client-fabric/build/libs/MXPocketShulker-fabric-"$VERSION".jar \
             server-paper/build/libs/PocketShulkerPaperBridge-"$VERSION".jar \
             --target "$GITHUB_SHA" \
             --title "MX Pocket Shulker $VERSION" \
             --notes-file "$RUNNER_TEMP/CHANGELOG.md"
+
+      - name: Upload to CurseForge
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && steps.info.outputs.released != 'true' && steps.info.outputs.relevant == 'true'
+        env:
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+          CURSEFORGE_PROJECT: "1799700"
+          FILE: client-fabric/build/libs/MXPocketShulker-fabric-${{ steps.info.outputs.version }}.jar
+          DISPLAY_NAME: MX Pocket Shulker ${{ steps.info.outputs.version }}
+          CHANGELOG_FILE: ${{ runner.temp }}/CHANGELOG.md
+          MC_VERSION: ${{ steps.info.outputs.mc }}
+          ENVIRONMENTS: Client,Server
+          JAVA_VERSION: Java 25
+          RELATIONS: '[{"slug":"fabric-api","type":"requiredDependency"}]'
+        run: bash .github/scripts/curseforge-upload.sh
