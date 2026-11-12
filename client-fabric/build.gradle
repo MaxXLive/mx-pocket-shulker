@@ -2,7 +2,7 @@ plugins {
     id 'net.fabricmc.fabric-loom' version "${loom_version}"
 }
 
-// CI passes -PreleaseVersion=<mc>-NNNN; local builds are marked as dev builds
+// CI passes -PreleaseVersion=<mc>-<major>.<minor>.<patch>; local builds are marked as dev builds
 version = providers.gradleProperty("releaseVersion").getOrElse("${project.minecraft_version}-dev")
 group = project.maven_group
 

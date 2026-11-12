@@ -7,7 +7,7 @@ val minecraftVersion = project.property("minecraftVersion") as String
 val paperBuild = project.property("paperBuild") as String
 
 group = "de.ermackov"
-// CI passes -PreleaseVersion=<mc>-NNNN; local builds are marked as dev builds
+// CI passes -PreleaseVersion=<mc>-<major>.<minor>.<patch>; local builds are marked as dev builds
 version = providers.gradleProperty("releaseVersion").getOrElse("$minecraftVersion-dev")
 
 repositories {

@@ -25,7 +25,7 @@ Get both jars from [GitHub Releases](../../releases). Pick the release whose ver
 
 | File | What | Install on |
 |---|---|---|
-| `MXPocketShulker-<version>.jar` | Fabric mod | every player's client who wants the hotkey, and the server if it runs Fabric |
+| `MXPocketShulker-fabric-<version>.jar` | Fabric mod | every player's client who wants the hotkey, and the server if it runs Fabric |
 | `PocketShulkerPaperBridge-<version>.jar` | Paper plugin | the server if it runs Paper |
 
 ### Which server needs what
@@ -80,7 +80,7 @@ To also test against a Paper server, start a Paper server with the plugin on por
 
 ## Versioning and releases
 
-Versions have the form **`<minecraft version>-NNNN`**, for example `26.3-0001`. Both jars of a release always have the same version. Pushes to `main` build, tag and release through [GitHub Actions](.github/workflows/build.yml); [`.github/scripts/release-info.sh`](.github/scripts/release-info.sh) picks the next number and writes the changelog from Conventional Commits.
+Versions have the form **`<minecraft version>-<major>.<minor>.<patch>`**, for example `26.3-1.0.0`. Both jars of a release always have the same version. Pushes to `main` build, tag and release through [GitHub Actions](.github/workflows/build.yml); [`.github/scripts/release-info.sh`](.github/scripts/release-info.sh) picks the next version from Conventional Commits (`feat!`/`BREAKING CHANGE` → major, `feat` → minor, everything else → patch) and writes the changelog. Each release also uploads the Fabric mod to CurseForge.
 
 ## License
 
